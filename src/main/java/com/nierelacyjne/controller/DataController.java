@@ -41,7 +41,7 @@ public class DataController {
         Data data = dataRepository.findById(dataId).orElseThrow(
                 () -> new ResouceNotFoundException("Data not found for this id :: " + dataId)
         );
-        data.setName(dataDetails.getName());
+        data.setState(dataDetails.getState());
         final Data updatedData = dataRepository.save(data);
         return ResponseEntity.ok(updatedData);
     }
