@@ -42,6 +42,12 @@ public class DataController {
                 () -> new ResouceNotFoundException("Data not found for this id :: " + dataId)
         );
         data.setState(dataDetails.getState());
+        data.setState_abbreviation(dataDetails.getState_abbreviation());
+        data.setCounty(dataDetails.getCounty());
+        data.setParty(dataDetails.getParty());
+        data.setCandidate(dataDetails.getCandidate());
+        data.setVotes(dataDetails.getVotes());
+        data.setFraction_votes(dataDetails.getFraction_votes());
         final Data updatedData = dataRepository.save(data);
         return ResponseEntity.ok(updatedData);
     }
