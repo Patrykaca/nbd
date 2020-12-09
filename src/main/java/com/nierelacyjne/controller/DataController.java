@@ -48,6 +48,7 @@ public class DataController {
         data.setCandidate(dataDetails.getCandidate());
         data.setVotes(dataDetails.getVotes());
         data.setFraction_votes(dataDetails.getFraction_votes());
+        data.setFips(data.getFips());
         final Data updatedData = dataRepository.save(data);
         return ResponseEntity.ok(updatedData);
     }

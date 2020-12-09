@@ -21,7 +21,8 @@ public class Data {
     private String county;
     private String party;
     private String candidate;
-    private int votes;
+    private Integer votes;
     private double fraction_votes;
+    private Integer fips;
 
 }
